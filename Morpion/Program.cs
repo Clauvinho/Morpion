@@ -9,20 +9,36 @@ namespace Morpion
         public static int[,] grille = new int[3, 3]; // matrice pour stocker les coups joués
 
         // Fonction permettant l'affichage du Morpion
+        /*La fonction */
         public static void AfficherMorpion(int j, int k)
         {
-            // A compléter 
+            // A compléter. C'EST FAIT 
+            // Dessiner une grille
+            for (var p = 0; p < grille.GetLength(0); p++)
+            {
+                Console.Write("\n|====|====|====|\n");
+                Console.Write("|");
+                for (var i = 0; i < grille.GetLength(1); i++)
+                {
+                    Console.Write("    ");
+                    Console.Write("|");
+                }
+
+            }
+            Console.Write("\n|====|====|====|\n");
+
+
         }
 
-        // Fonction permettant de changer
-        // dans le tableau qu'elle est le 
-        // joueur qui à jouer
-        // Bien vérifier que le joueur ne sort
-        // pas du tableau et que la position
-        // n'est pas déjà jouée
+         /* Fonction permettant de changer dans le tableau qu'elle est le joueur qui à jouer
+        Bien vérifier que le joueur ne sort
+        pas du tableau et que la position
+        n'est pas déjà jouée */
+
         public static bool AJouer(int j, int k, int joueur)
         {
-            // A compléter 
+            // A compléter
+            
             return false;
         }
 
@@ -56,16 +72,18 @@ namespace Morpion
             while(!gagner && essais != 9)
             {
 
-                // A compléter 
+                // A compléter. FAIT 
+                AfficherMorpion( j, k);
                 try
                 {
+                    Console.WriteLine("C'est au tour du joueur 1   :    ");
                     Console.WriteLine("Ligne   =    ");
                     Console.WriteLine("Colonne =    ");
                     // Peut changer en fonction de comment vous avez fait votre tableau.
-                    Console.SetCursorPosition(LigneDébut + 10, ColonneDébut + 9); // Permet de manipuler le curseur dans la fenêtre 
+                    Console.SetCursorPosition(LigneDébut + 10, ColonneDébut + 10); // Permet de manipuler le curseur dans la fenêtre 
                     l = int.Parse(Console.ReadLine()) - 1; 
                     // Peut changer en fonction de comment vous avez fait votre tableau.
-                    Console.SetCursorPosition(LigneDébut + 10, ColonneDébut + 10); // Permet de manipuler le curseur dans la fenêtre 
+                    Console.SetCursorPosition(LigneDébut + 10, ColonneDébut +9); // Permet de manipuler le curseur dans la fenêtre 
                     c = int.Parse(Console.ReadLine()) - 1;
 
                     // A compléter 
